@@ -14,11 +14,14 @@ jobs:
       run: sudo apt-get install autoconf automake libtool yasm nasm tcl
     - name: Checkout Blender
       run: git clone https://git.blender.org/blender.git
-    # - name: Make Blender Deps
-    #   working-directory: ./blender
-    #   run: make deps
+    - name: Make Blender Deps
+      working-directory: ./blender
+      run: make deps
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
         name: Build
-        path: ./
+        path: |
+          ./
+          !./blender
+          !./**/*.o
