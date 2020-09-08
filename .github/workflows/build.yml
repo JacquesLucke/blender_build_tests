@@ -11,7 +11,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
     - name: Install Dependencies
-      run: apt install autoconf automake libtool yasm nasm tcl
+      run: sudo apt-get install autoconf automake libtool yasm nasm tcl
     - name: Checkout Blender
       run: git clone https://git.blender.org/blender.git
     - run: cd blender && make deps
