@@ -18,7 +18,7 @@ jobs:
     #   working-directory: ./blender
     #   run: make deps
     - name: Upload
-      uses: actions/upload-artifact@2
+      uses: actions/upload-artifact@v2
       with:
         name: Build
         path: ./
