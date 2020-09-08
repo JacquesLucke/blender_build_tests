@@ -12,7 +12,4 @@ jobs:
     steps:
     - name: Checkout Blender
       run: git clone https://git.blender.org/blender.git
-    - run: cd blender
-    - name: Checkout Submodules
-      run: git submodule update --init --recursive
-    - run: make deps
+    - run: cd blender && make deps
